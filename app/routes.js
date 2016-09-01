@@ -7,7 +7,7 @@ module.exports = function(app) {
 
     // GET Routes
     // --------------------------------------------------------
-    // Retrieve records for all users in the db
+    // Retrieve records for all events in the db
     app.get('/api/events', function(req, res){
 
         // Uses Mongoose schema to run the search (empty conditions)
