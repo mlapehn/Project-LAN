@@ -5,6 +5,7 @@
 
 addCtrl.$inject = ["$scope", "$http", "$routeParams"];
 function addCtrl($scope, $http, $routeParams){
+  console.log($scope, $http, $routeParams)
 
     // Functions
     // ----------------------------------------------------------------------------
