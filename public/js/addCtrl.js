@@ -16,7 +16,6 @@ function addCtrl($scope, $http, $routeParams){
             name: $scope.formData.name,
             url: $scope.formData.url,
         };
-
         // Saves the user data to the db
         $http.post('/api/events', eventData)
             .success(function (data) {
@@ -31,15 +30,15 @@ function addCtrl($scope, $http, $routeParams){
             });
     };
     $scope.getAllEvents = function ($scope, $http){
-    $scope.hello = "wine index controller is working!";
-      $http.get('http://localhost:3000/api/events')
+    $scope.hello = "Wizzy is cool!";
+      $http.get('/api/events')
         .then(function(response){
          $scope.events = response.data;
          console.log($scope.events);
         });
      }
       $scope.getEvent = function ($scope, $http, $routeParams){
-       $http.get('http://localhost:3000/api/events/' + $routeParams.name)
+       $http.get('/api/events/' + $routeParams.name)
          .then(function(response) {
              $scope.event = response.data;
              console.log($scope.event);
