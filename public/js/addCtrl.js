@@ -31,14 +31,14 @@ function addCtrl($scope, $http, $routeParams){
     };
     $scope.getAllEvents = function ($scope, $http){
     $scope.hello = "Wizzy is cool!";
-      $http.get('/api/events')
+      $http.get('http://localhost:3000/api/events')
         .then(function(response){
          $scope.events = response.data;
          console.log($scope.events);
         });
      }
       $scope.getEvent = function ($scope, $http, $routeParams){
-       $http.get('/api/events/' + $routeParams.name)
+       $http.get('http://localhost:3000/api/events/' + $routeParams.name)
          .then(function(response) {
              $scope.event = response.data;
              console.log($scope.event);
