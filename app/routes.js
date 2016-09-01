@@ -28,12 +28,13 @@ module.exports = function(app) {
 
         // Creates a new event based on the Mongoose schema and the post bo.dy
         var newevent = new Event(req.body);
-        console.log(newevent)
+        console.log("newevent")
 
         // New User is saved in the db.
         newevent.save(function(err){
             if(err)
                 res.send(err);
+        console.log("saving")
 
             // If no errors are found, it responds with a JSON of the new user
             res.json(req.body);
