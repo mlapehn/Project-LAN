@@ -1,0 +1,11 @@
+<div class="col-md-12" ng-controller="eventsController as eventsCtrl">
+	<div class="row">
+		<div ng-repeat="event in eventsCtrl.param.events" class="col-md-12 event-full">
+			<a href="{{event.url}}">
+				<div id="events-block">
+					<div style="text-align: center;" id="event-name">{{event.name}}</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
