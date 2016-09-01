@@ -23,10 +23,10 @@ module.exports = function(app) {
 
     // POST Routes
     // --------------------------------------------------------
-    // Provides method for saving new users in the db
+    // Provides method for saving new events in the db
     app.post('/api/events', function(req, res){
 
-        // Creates a new User based on the Mongoose schema and the post bo.dy
+        // Creates a new event based on the Mongoose schema and the post bo.dy
         var newevent = new Event(req.body);
 
         // New User is saved in the db.
